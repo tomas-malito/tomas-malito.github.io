@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Coiny&family=Roboto:wght@400;700&display=swap');
 
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
- 
-    
-
 body {
-    
-    margin: 0
-    
-
+  font-family: sans-serif;
+  color: white;
+  background: black;
+  position: relative;
+  z-index: 1;
 }
 
 img {
@@ -20,197 +19,149 @@ img {
   height: auto;
 }
 
+/* ========== NAVEGACIÓN ========== */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
 
+nav a {
+  margin-left: 20px;
+  color: #f7f2f2;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+.barra {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+}
 
 nav h1,
 footer h1 {
-    font-family: 'Coiny', cursive;
-
+  font-family: 'Coiny', cursive;
 }
 
-nav h1 {
-    margin-right: auto;
-    
-}
-
-nav a,
-footer a {
-    margin-left: 20px;
-    color: #f7f2f2;
-    text-decoration: none;
-    
-}
-
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px;
-}
-
-
-
-
-ul {
-    list-style:none;
-    margin: 0;
-    padding: 0;
-
-}
-
-.barra{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 35px;
-}
-
-.contactocuadro{
-    color: yellow;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-}
-nav a {
-    text-transform: capitalize;
-  
+/* ========== SECCIONES PRINCIPALES ========== */
+main {
+  font-size: 21px;
 }
 
 header h1 {
-    font-weight: 700;
-    font-size: 41px;
+  font-weight: 700;
+  font-size: 41px;
 }
 
 .grande {
-    font-size: 100px;
-    font-family: 'Coiny', cursive;
+  font-size: 100px;
+  font-family: 'Coiny', cursive;
 }
 
-
-
-
-
-.servicios1 {
-    font-size: 24px;
-    font-weight: bold;
-    
-
+.encolumnar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-bottom: 0.5px solid gray;
 }
 
-aside img {
-    height: auto;
-    width: 50%;
+section {
+  width: 45%;
 }
-
-
-
-
-
-
-header.encolumnar,
-aside.encolumnar {
-    border-bottom: none;
-}
-
 
 header img {
-    width: 70%;
-    margin-left: 30%;
+  width: 70%;
+  margin-left: 30%;
 }
 
-footer,
-main,
-header,
-aside {
-    width: 100%;
-    
+.imagenprincipal {
+  width: 50%;
+  margin: auto;
+  height: 300px;
 }
 
-footer {
-    height: 100px;
-    padding: 100px;
-    background-color: #000000;
-    display: flex;
-    align-items: center;
-    
+.hola img {
+  display: block;
+  margin: 0 auto;
 }
 
-#imagen {
-    width: 80%;
-    display: block;
-    margin: auto;
+/* ========== TEXTOS DESTACADOS ========== */
+.nuestrotaller,
+.somos,
+#titulo,
+.querescontacto,
+.oferta,
+.contacto1,
+.ubicacion1 {
+  color: yellow;
+  font-size: 35px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.envianos {
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+.textonuestrotaller {
+  font-size: 21px;
+}
 
+.trabajamosconpasion {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ========== FORMULARIO ========== */
+form {
+  margin: auto;
+}
 
 label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input {
-    height: 40px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input,
 textarea {
-    width: 100%;
+  width: 100%;
+  font-size: 16px;
 }
 
-form {
-    margin: auto;
-}
-
-.encolumnar {
-    display: flex;
-    justify-content: space-between;
-
-    padding: 20px;
-    margin-bottom: 30px;
-    border-bottom: 0.5px solid gray;
-    
-}
-.seguinosenredes{
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-size: 30px;
-}
-
-.boton {
-    padding: 0;
-    border-bottom: none;
+input {
+  height: 40px;
 }
 
 .boton input {
+  border: none;
+  width: auto;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+}
 
-    border: none;
-    width: auto;
-    background-color: black;
-    color: white;
-    font-weight: bold;
+/* ========== LISTAS ========== */
+.servi {
+  list-style-type: none;
 }
 
 ol li {
-    margin-bottom: 6%;
+  margin-bottom: 6%;
 }
 
-
-
-
-
-section {
-    width: 45%;
-}
-
-main {
-    font-size: 21px;
-}
-
-
-
-/* Video de fondo */
+/* ========== VIDEO DE FONDO ========== */
 video#bg-video {
   position: fixed;
   top: 0;
@@ -218,90 +169,20 @@ video#bg-video {
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
-  z-index: -2; /* más atrás que el overlay */
+  z-index: -2;
 }
 
-/* Capa oscura */
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* negro con opacidad */
-  z-index: -1; /* entre el video y el contenido */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
-/* Contenido principal */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  color: white;
-  position: relative;
-  z-index: 1;
-}
-
-.hola {
-  
-    display: block;
-    margin: 0;
-    
-    
-}
-
-.servi {
-    list-style-type: none;
-}
-
-.telefono{
-    margin-left: 700px;
-}
-
-.nuestrotaller {
-   
-    color: yellow;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-.textonuestrotaller{
-    font-size: 21px;
-}
-.somos{
-    color: yellow;
-    font-size: 35px;
-   font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-#titulo {
-    color: yellow;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-
-.querescontacto{
-    color: yellow;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-
-}
-
-.envianos{
-    color: rgb(255, 255, 255);
-    font-size: 30px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-.oferta{
-     color: yellow;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-
-
+/* ========== CARRUSEL ========== */
 .box {
   max-width: 800px;
   margin: 40px auto;
@@ -351,32 +232,10 @@ body {
 .controls button:hover {
   background-color: rgba(0, 0, 0, 0.933);
 }
-.pasion1{
-    text-align: center;
-    color: yellow;
-    font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
 
-
-.trabajamosconpasion{
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif
-}
-
-.imagenprincipal{
-    width: 50%;
-    display: block;
-    margin: auto;
-    height: 300px; 
-    margin-left: 6px;
-
-}
-
-
-
+/* ========== FOOTER ========== */
 footer {
-   min-height: 450px; /* Podés ajustar el número */
+  min-height: 450px;
   padding: 40px 20px;
   background-color: #111;
   color: white;
@@ -389,6 +248,7 @@ footer {
 .footer-contacto,
 .footer-mapa {
   flex: 1 1 300px;
+  text-align: center;
 }
 
 .footer-contacto h3,
@@ -399,9 +259,6 @@ footer {
 .footer-contacto a {
   color: #fdffff;
   text-decoration: none;
-}
-.footer-contacto{
-    text-align: center;
 }
 
 .btn-whatsapp {
@@ -424,35 +281,26 @@ footer {
   padding-top: 20px;
 }
 
-.contacto1{
-    text-align: center;
-     font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+/* ========== ASIDE ========== */
+.seguinosenredes {
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.ubicacion1{
-    text-align: center;
-     font-size: 35px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif
+aside img {
+  width: 50%;
+  height: auto;
 }
 
-
-
-
-
-
-
-/* 🔧 RESPONSIVE DESIGN PARA CELULARES Y TABLETS */
+/* ========== RESPONSIVE: Celulares y Tablets ========== */
 @media (max-width: 768px) {
-
-    .grande {
+  .grande {
     font-size: 48px;
   }
 
   h2, h3 {
     font-size: 24px;
   }
-}
 
   nav {
     flex-direction: column;
@@ -461,39 +309,25 @@ footer {
   }
 
   nav ul {
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 10px;
+    align-items: center;
   }
 
-  .hola img {
+  .hola img,
+  header img,
+  .imagenprincipal {
     width: 100%;
-    height: auto;
-  }
-
-  header img {
-    width: 100%;
-  margin: 0 auto;
-  display: block;
+    margin: 0 auto;
   }
 
   .encolumnar {
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
-
-
   }
 
   section {
     width: 90% !important;
-  }
-
-  .imagenprincipal {
-    width: 100%;
-    height: auto;
-    margin: 0;
   }
 
   .carousel {
@@ -502,6 +336,11 @@ footer {
 
   .carousel img {
     height: auto;
+  }
+
+  .controls button {
+    font-size: 30px;
+    padding: 15px;
   }
 
   .footer-contacto,
@@ -531,20 +370,14 @@ footer {
 
   .telefono {
     margin: 0 auto;
-  text-align: center;
+    text-align: center;
   }
-
-  input,
-  textarea {
-    font-size: 16px;
-  }
-
-  .boton input {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  .controls button {
-  font-size: 30px;
-  padding: 15px;
 }
 
+/* ========== RESPONSIVE: Escritorio ancho ========== */
+@media (min-width: 1200px) {
+  main, header, footer, aside {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
