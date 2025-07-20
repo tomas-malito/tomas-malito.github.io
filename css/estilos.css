@@ -19,41 +19,86 @@ img {
   height: auto;
 }
 
+/* ========== VIDEO DE FONDO ========== */
+video#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
 /* ========== NAVEGACIÓN ========== */
 nav {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 30px;
+}
+
+.nav-container {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
   flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-nav a {
-  margin-left: 20px;
-  color: #f7f2f2;
-  text-decoration: none;
-  text-transform: capitalize;
+.logo-container {
+  flex: 1;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-ul {
-  list-style: none;
+.logo {
+  height: auto;
+  max-height: 120px;
+  width: auto;
 }
 
 .barra {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 35px;
-}
-
-nav h1,
-footer h1 {
+  display: flex;
+  gap: 30px;
+  font-size: 24px;
   font-family: 'Coiny', cursive;
+  align-items: center;
 }
 
-/* ========== SECCIONES PRINCIPALES ========== */
+.barra li {
+  list-style: none;
+}
+
+.barra a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.barra a:hover {
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 36px;
+  color: yellow;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ========== ENCABEZADO ========== */
 main {
   font-size: 21px;
 }
@@ -92,11 +137,6 @@ header img {
   height: 300px;
 }
 
-.hola img {
-  display: block;
-  margin: 0 auto;
-}
-
 /* ========== TEXTOS DESTACADOS ========== */
 .nuestrotaller,
 .somos,
@@ -128,11 +168,6 @@ form {
   margin: auto;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 input,
 textarea {
   width: 100%;
@@ -143,7 +178,8 @@ input {
   height: 40px;
 }
 
-.boton input {
+.boton input,
+button[type="submit"] {
   border: none;
   width: auto;
   background-color: black;
@@ -161,27 +197,6 @@ ol li {
   margin-bottom: 6%;
 }
 
-/* ========== VIDEO DE FONDO ========== */
-video#bg-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -2;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
-
 /* ========== CARRUSEL ========== */
 .box {
   max-width: 800px;
@@ -190,7 +205,7 @@ video#bg-video {
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #020202;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .carousel {
@@ -221,7 +236,7 @@ video#bg-video {
 }
 
 .controls button {
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   color: yellow;
   font-size: 24px;
@@ -292,14 +307,41 @@ aside img {
   height: auto;
 }
 
-/* ========== RESPONSIVE: Celulares y Tablets ========== */
+/* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
   .grande {
     font-size: 48px;
   }
 
-  h2, h3 {
+  h2,
+h3 {
     font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .barra {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px 0;
+    width: 100%;
+    border-top: 1px solid yellow;
+  }
+
+  .barra.active {
+    display: flex;
+  }
+
+  .barra li {
+    margin: 10px 0;
+  }
+
+  nav a {
+    font-size: 20px;
   }
 
   nav {
@@ -308,13 +350,8 @@ aside img {
     padding: 10px;
   }
 
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
-  .hola img,
+  .logo-container,
+  .logo,
   header img,
   .imagenprincipal {
     width: 100%;
@@ -374,9 +411,11 @@ aside img {
   }
 }
 
-/* ========== RESPONSIVE: Escritorio ancho ========== */
 @media (min-width: 1200px) {
-  main, header, footer, aside {
+  main,
+  header,
+  footer,
+  aside {
     max-width: 1400px;
     margin: 0 auto;
   }
